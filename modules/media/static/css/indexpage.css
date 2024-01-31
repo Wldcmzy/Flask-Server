@@ -1,0 +1,94 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    background-color: black; /* 设置背景颜色为黑色 */
+    font-weight: bold; /* 加粗所有文字 */
+}
+
+h1 {
+    color: #ff1493; /* 设置标题颜色为深粉色 */
+    font-size: 30px; /* 设置标题字体大小为48像素，可以根据需要调整 */
+}
+
+.search-container {
+    width: 80%; /* 调整宽度为屏幕的65% */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 5px;
+    font-size: 15px; /* 将字体大小增大一倍 */
+}
+
+#search-button {
+    margin-left: 10px;
+    padding: 7.2px 14.4px; /* 减小按钮的大小四分之三 */
+    font-size: 15px; /* 增大字体大小四倍 */
+    cursor: pointer;
+    background-color: #ffd900; /* 橙黄色 */
+    color: black; /* 设置按钮内的字体颜色为黑色 */
+}
+
+#scroll-up-btn, #scroll-down-btn {
+    position: fixed;
+    top: 40px;
+    left: 10px;
+    background-color: #ffd900; /* 橙黄色 */
+    color: black; /* 设置按钮内的字体颜色为黑色 */
+    padding: 7.69px; /* 将按钮大小减小四倍 */
+    cursor: pointer;
+    font-size: 15px; /* 恢复字体大小 */
+    border: none;
+    outline: none;
+    margin-bottom: 50px; /* 增大按钮在垂直距离上的间距 */
+}
+
+#scroll-down-btn {
+    top: 100px;
+}
+
+.box {
+    width: 92%; /* 框的宽度占屏幕宽度的80% */
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #333; /* 设置框的背景颜色 */
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+.box:hover {
+    background-color: #555; /* 鼠标悬停时改变框的背景颜色 */
+}
+
+.box:active {
+    background-color: #abd2ff;
+}
+
+.box img {
+    width: 50px; /* 设置图片宽度为100像素 */
+    height: 50px; /* 设置图片高度为100像素，使其成为正方形 */
+    margin-right: 0px; /* 为了在图片右侧添加一些间距 */
+}
+
+.box p {
+    margin: 0; /* 清除段落的默认边距 */
+    flex: 1; /* 让文本充满剩余空间，实现居中效果 */
+    text-align: center; /* 设置文本居中对齐 */
+    font-size: 15px; /* 设置字体大小为36像素，可以根据需要调整 */
+    color: rgb(2, 193, 11); /* 设置字体颜色为绿色 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 隐藏溢出部分 */
+    text-overflow: ellipsis; /* 使用省略号表示溢出的文本 */
+}

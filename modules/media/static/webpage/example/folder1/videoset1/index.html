@@ -1,0 +1,97 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/media/resourcemedia/css/index_videoset.css">
+	<script src="/media/resourcemedia/js/someusefulutils.js"></script>
+    <title>videoset1</title>
+</head>
+<body>
+
+<h1>videoset1</h1>
+<img id="coverImage" src="/media/resourcemedia/content/example/folder1/videoset1/_cover.jpg" alt="Cover Image">
+
+<button id="scroll-up-btn" onclick="scrollPage(-0.2)">向上滑动</button>
+<button id="scroll-down-btn" onclick="scrollPage(0.2)">向下滑动</button>
+
+<div class="box-container" id="boxContainer">
+    <!-- Boxes will be dynamically added here using JavaScript -->
+</div>
+
+<script>
+    // Number of boxes
+    var numberOfBoxes = 2; // Adjust as needed
+
+    // Get the container element
+    var boxContainer = document.getElementById('boxContainer');
+
+    // List of items with text and link
+    var items = [
+        
+        { text: '2024-01-31 17-16-41', link: '/media/resourcemedia/webpage/example/folder1/videoset1/video_2024-01-31 17-16-41.mp4.html' },
+
+        { text: '2024-01-31 17-16-50', link: '/media/resourcemedia/webpage/example/folder1/videoset1/video_2024-01-31 17-16-50.mp4.html' },
+
+        // Add more items as needed
+    ];
+
+    // Dynamic creation of boxes with the same background image
+    for (var i = 0; i < numberOfBoxes; i++) {
+        var box = document.createElement('div');
+        box.className = 'box';
+        box.style.backgroundImage = 'url("/media/resourcemedia/content/example/folder1/videoset1/_cover.jpg")';
+
+        var boxText = document.createElement('div');
+        boxText.className = 'box-text';
+        boxText.innerHTML = items[i % items.length].text;
+
+        // Set the link for each box
+        box.onclick = function(link) {
+            return function() {
+                //window.location.href = link;
+                window.open(link, '_blank');
+            };
+        }(items[i % items.length].link);
+
+        box.appendChild(boxText);
+        boxContainer.appendChild(box);
+    }
+</script>
+
+<script>
+    function adjustBoxWidth() {
+        var windowWidth = window.innerWidth;
+        var boxes = document.querySelectorAll('.box');
+
+        boxes.forEach(function (box) {
+            if (windowWidth < 400) {
+                box.style.width = '70%';
+            } else if (windowWidth < 600) {
+                box.style.width = '35%';
+            } else if (windowWidth < 700) {
+                box.style.width = '27%';
+            } else if (windowWidth < 850) {
+                box.style.width = '21%';
+            } else if (windowWidth < 1000) {
+                box.style.width = '18%';
+            } else if (windowWidth < 1250) {
+                box.style.width = '14%';
+            } else {
+                box.style.width = '10%';
+            }
+        });
+    }
+
+    // 初始加载时调整一次
+    adjustBoxWidth();
+
+    // 在窗口大小改变时触发调整
+    window.addEventListener('resize', adjustBoxWidth);
+</script>
+
+</body>
+</html>
+

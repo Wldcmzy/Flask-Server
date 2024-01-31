@@ -1,0 +1,80 @@
+
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+h1 {
+    color: lightgreen;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#coverImage {
+    width: 80%;
+    margin: 0 auto; /* Center the image */
+    display: block; /* Remove default inline display for block-level styling */
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.box {
+    position: relative;
+    width: 22%;
+    aspect-ratio: 2/3;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid lightgreen;
+    background-size: cover;
+}
+
+.box:hover {
+    transform: scale(1.04);
+}
+
+.box-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7); /* 70% black */
+    display: inline-block;
+    width: 100%; /* Make the width 100% */
+    box-sizing: border-box; /* Include padding and border in the width */
+    text-align: center; /* Center the text horizontally */
+    white-space: normal; /* Allow multiple lines */
+}
+
+#scroll-up-btn,
+#scroll-down-btn {
+    position: fixed;
+    top: 120px;
+    left: 20px;
+    width: 120px;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 70px; /* Increased margin-bottom */
+    z-index: 1;
+}
+
+#scroll-down-btn {
+    top: 200px; /* Increased top position */
+}

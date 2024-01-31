@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/nologin/css/styles.css">
+    <title>登录</title>
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form" method="post" action="/login">
+            <h1>登  录</h1>
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username" required>
+            <br/>
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">登录</button>
+            <br/><br/>
+            <button id="changeButton">切换到注册页面</button>
+        </form>
+
+        <script>
+            var button = document.getElementById("changeButton");
+            button.addEventListener("click", function() {
+                var destinationUrl = "/register";
+                window.location.href = destinationUrl;
+            });
+        </script>
+    </div>
+</body>
+</html>
