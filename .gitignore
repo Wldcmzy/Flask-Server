@@ -5,7 +5,7 @@ modules/media/static/webpage/*
 !modules/media/static/content/example
 !modules/media/static/webpage/example
 
-!modules/media/static/content/一些漫画/*.7z
+!*.7z
 
 
 
