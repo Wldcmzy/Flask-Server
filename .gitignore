@@ -13,7 +13,6 @@ modules/media/static/webpage/*
 
 
 
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.pyc

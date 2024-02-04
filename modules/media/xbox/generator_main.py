@@ -116,4 +116,3 @@ def regenerate() -> None:
     shutil.copy(webpage_path / INDEX_FILE_NAME, template_path / INDEX_FILE_NAME)
 
     print('生成完成...')
-    os.system('pause')

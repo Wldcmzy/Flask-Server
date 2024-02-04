@@ -48,6 +48,7 @@ def generate_imagesets(
         for imagepreviewfilename in IMAGE_PREVIEW_FILE_NAME_LIST:
             if imagepreviewfilename in lstdir:
                 image_preview = f'{URL_PREFIX}{content_url}/{foldername}/{imagepreviewfilename}'
+
         imagesets_html_text += INAGESET_INDEX_HTML_ITEM.format(
             link = webpage_file_url,
             image_preview = image_preview,
