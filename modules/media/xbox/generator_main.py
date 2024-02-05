@@ -5,9 +5,11 @@ import shutil
 from typing import Optional
 from .generator_config import *
 from .generator_strings import HTML_ITEM, HTML_MAIN
+from .generator_func_direct import generate_direct
 from .generator_func_imageset import generate_imagesets
 from .generator_func_videoset import generate_videoset
 from .generator_func_musicset import generate_musicset
+
 
 content_path: Path
 webpage_path: Path
@@ -25,6 +27,7 @@ def generate_by_type(path: Path, datatype: str):
     # func: function = lambda *args: None
 
     func_map = {
+        'direct' : generate_direct,
         'imageset' : generate_imagesets,
         'videoset' : generate_videoset,
         'musicset' : generate_musicset,
@@ -75,7 +78,7 @@ def create_index(folders: list[str], designed_title: Optional[str]) -> None:
 def dfs(designed_title: Optional[str] = None) -> None:
     global content_path
     global webpage_path
-
+    # print('dfs:', content_path)
     path_eodfsp: Path = content_path / EODFSP_FILE_NAME
     if path_eodfsp.exists():
         with open(path_eodfsp, 'r', encoding = 'utf-8') as f:
@@ -103,10 +106,14 @@ def regenerate() -> None:
     content_path = Path() / STATIC_FOLDER / CONTENT_FOLDER
     webpage_path = Path() / STATIC_FOLDER / WEBPAGE_FOLDER
 
+    print('deleting webpage folder...')
+    print('正在删除webpage文件夹,若程序效率过慢,可先关闭程序手动删除...')
     if os.path.exists(webpage_path) and os.path.isdir(webpage_path):
         shutil.rmtree(webpage_path)
+    print('creating webpage folder...')
     os.mkdir(webpage_path)
 
+    print('dfsing...')
     dfs(MODULE_NAME)
 
     template_path = Path() / TEMPLATE_FOLDER 

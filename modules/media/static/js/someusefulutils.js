@@ -1,4 +1,5 @@
 function scrollPage(factor) {
+    console.log('scroll -- factor = ' + factor);
     // Scroll the page by a certain percentage of the total page height
     var totalHeight = Math.max(
         document.body.scrollHeight,

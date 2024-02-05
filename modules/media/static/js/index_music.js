@@ -82,7 +82,7 @@ function playSameMusic() {
 function playMusic(songName) {
     console.log('playerMusic = ' + songName)
     var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = songName;
+    audioPlayer.src = itempath + '/' + songName;
     audioPlayer.play();
 
     var songNameDisplay = document.getElementById('song-name');

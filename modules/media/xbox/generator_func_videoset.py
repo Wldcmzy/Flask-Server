@@ -16,7 +16,7 @@ def generate_videoset(
     content_url: str,
     webpage_url: str,
 ) -> None:
-    print(f'<videoset> 开始生成视频集, 路径 = {content_path}')
+    print(f'\033[1;33;40m<videoset>\033[0m 开始生成\033[1;33;40m视频集\033[0m, 路径 = {content_path}')
     lstdir = os.listdir(content_path)
     videos = [f for f in lstdir if f.endswith('.mp4')]
     videos_index_items = ''

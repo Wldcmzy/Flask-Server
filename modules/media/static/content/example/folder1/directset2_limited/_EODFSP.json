@@ -1,0 +1,8 @@
+{
+	"sign": "end", 
+	"type": "direct", 
+	"suffix": [
+		"pdf"
+		, "md"
+	]
+}

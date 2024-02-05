@@ -240,14 +240,14 @@ VIDEOSET_CONTEXT_HTML_CAPTION_TIEM = '''
 
 MUSICSET_HTML_MAIN = '''
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <link rel="stylesheet" href="/media/resourcemedia/css/index_music.css">
     <script src="/media/resourcemedia/js/someusefulutils.js"></script>
-	<script src="/media/resourcemedia/css/index_music.js"></script>
+	<script src="/media/resourcemedia/js/index_music.js"></script>
     
 </head>
 <body>
@@ -264,7 +264,7 @@ MUSICSET_HTML_MAIN = '''
 
     <div id="search">
         <input type="text" id="search-box" placeholder="搜索音乐">
-        <input type="button" value="搜索" onclick="searchMusic()">
+        <input class="xfjwEi34_IOdsfmZ" type="button" value="搜索" onclick="searchMusic()">
     </div>
 
     <div id="music-list">
@@ -288,6 +288,7 @@ MUSICSET_HTML_MAIN = '''
         var playMode = 'random'; // 初始播放模式为随机播放
 		var audioPlayer = document.getElementById('audio-player');
 		audioPlayer.addEventListener('ended', playRandom);
+        const itempath = "{itempath}";
     </script>
 </body>
 </html>
@@ -295,5 +296,5 @@ MUSICSET_HTML_MAIN = '''
 '''
 
 MUSICSET_HTML_ITEM = '''
-        <div class="music-box" onclick="playMusic('{music}')">{music}</div>
+        <div class="music-box" onclick="playMusic('{mname}')">{mname}</div>
 '''

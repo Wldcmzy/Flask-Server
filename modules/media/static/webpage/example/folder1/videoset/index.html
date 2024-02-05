@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/media/resourcemedia/css/index_videoset.css">
 	<script src="/media/resourcemedia/js/someusefulutils.js"></script>
-    <title>videoset1</title>
+    <title>videoset</title>
 </head>
 <body>
 
-<h1>videoset1</h1>
-<img id="coverImage" src="/media/resourcemedia/content/example/folder1/videoset1/_cover.jpg" alt="Cover Image">
+<h1>videoset</h1>
+<img id="coverImage" src="/media/resourcemedia/content/example/folder1/videoset/_cover.jpg" alt="Cover Image">
 
 <button id="scroll-up-btn" onclick="scrollPage(-0.2)">向上滑动</button>
 <button id="scroll-down-btn" onclick="scrollPage(0.2)">向下滑动</button>
@@ -31,9 +31,9 @@
     // List of items with text and link
     var items = [
         
-        { text: '2024-01-31 17-16-41', link: '/media/resourcemedia/webpage/example/folder1/videoset1/video_2024-01-31 17-16-41.mp4.html' },
+        { text: '2024-01-31 17-16-41', link: '/media/resourcemedia/webpage/example/folder1/videoset/video_2024-01-31 17-16-41.mp4.html' },
 
-        { text: '2024-01-31 17-16-50', link: '/media/resourcemedia/webpage/example/folder1/videoset1/video_2024-01-31 17-16-50.mp4.html' },
+        { text: '2024-01-31 17-16-50', link: '/media/resourcemedia/webpage/example/folder1/videoset/video_2024-01-31 17-16-50.mp4.html' },
 
         // Add more items as needed
     ];
@@ -42,7 +42,7 @@
     for (var i = 0; i < numberOfBoxes; i++) {
         var box = document.createElement('div');
         box.className = 'box';
-        box.style.backgroundImage = 'url("/media/resourcemedia/content/example/folder1/videoset1/_cover.jpg")';
+        box.style.backgroundImage = 'url("/media/resourcemedia/content/example/folder1/videoset/_cover.jpg")';
 
         var boxText = document.createElement('div');
         boxText.className = 'box-text';

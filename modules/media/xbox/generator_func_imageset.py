@@ -17,7 +17,7 @@ def generate_imagesets(
     content_url: str,
     webpage_url: str,
 ) -> None:
-    print(f'<imageset> 开始生成图片集, 路径 = {content_path}')
+    print(f'\033[1;32;40m<imageset>\033[0m 开始生成\033[1;32;40m图片集\033[0m, 路径 = {content_path}')
     folders = [d for d in os.listdir(content_path) if os.path.isdir(os.path.join(content_path, d))]
     imagesets_html_text = ''
     for foldername in tqdm.tqdm(folders):

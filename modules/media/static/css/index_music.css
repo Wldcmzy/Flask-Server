@@ -55,7 +55,7 @@ input[type="button"] {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 100%;
     background-color: #34495e;
     padding: 10px;
     box-sizing: border-box;
@@ -72,13 +72,6 @@ input[type="button"] {
     position: relative;
 }
 
-#song-name {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    line-height: 1.5em;
-}
-
 #scroll-buttons,
 #play-buttons {
     position: fixed;
@@ -87,6 +80,9 @@ input[type="button"] {
     flex-direction: column;
     align-items: flex-start;
     z-index: 1;
+}
+#play-buttons {
+    top: 120px;
 }
 
 .scroll-button,
@@ -102,8 +98,35 @@ input[type="button"] {
 
 .play-button {
     background-color: #2ecc71;
+    /* margin-top: 100px; */
 }
 
-.play-button {
-    margin-top: 100px;
+
+.xfjwEi34_IOdsfmZ {
+    background-color: rgb(161, 36, 76);
+    color: white; /* 设置文字颜色为白色，以确保可读性 */
+    /* 可以添加其他样式，例如边框、圆角等 */
+}
+
+
+
+
+#song-name {
+    white-space: nowrap;
+    /* overflow: hidden; */
+    text-overflow: scroll;
+    /* 调整滚动速度和持续时间 */
+    animation: marquee 20s linear infinite;
+    /* text-overflow: ellipsis; */
+    line-height: 1.5em;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
