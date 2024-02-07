@@ -93,7 +93,6 @@ def generate_home_html(print_mod_info: bool = True) -> None:
         
     if print_mod_info:
         print('----------------------')
-        print()
 
     html = HTML_MAIN.format(items = items)
     with open('modules\\master\\templates\\home.html', 'w', encoding='utf-8') as f:

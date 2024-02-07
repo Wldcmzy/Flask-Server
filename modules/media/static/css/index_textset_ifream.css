@@ -1,0 +1,14 @@
+img {
+    display: block;
+    margin: 0 auto; /* 居中显示 */
+    max-width: 95vw; /* 宽度最大为视口宽度的80% */
+    height: auto; /* 根据比例调整高度 */
+    margin-top: 1px;
+}
+
+body {
+    background-color: black; /* 设置背景颜色为黑色 */
+    color: rgb(78, 172, 65); /* 设置字体颜色为绿色 */
+    margin-left: 25px;
+    margin-right: 15px;
+}

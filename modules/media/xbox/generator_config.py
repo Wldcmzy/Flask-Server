@@ -17,15 +17,15 @@ DEFAULT_IMAGE_1_URL = '/media/resourcemedia/img/default.png'
 
 EODFSP_FILE_NAME = '_EODFSP.json'
 INDEX_FILE_NAME = 'index.html'
-IMAGE_FILE_FORMAT_LIST: list[str] = (
+IMAGE_FILE_FORMAT_LIST: tuple[str] = (
     'jpg',
     'png',
     'bmp',
     'webp',
 )
-IMAGE_PREVIEW_FILE_NAME_LIST: list[str] = [f'_image_preview.{f}' for f in IMAGE_FILE_FORMAT_LIST]
-COVER_FILE_NAME_LIST: list[str] = [f'_cover.{f}' for f in IMAGE_FILE_FORMAT_LIST]
-MUSIC_FILE_FORMA_LIST: list[str] = (
+IMAGE_PREVIEW_FILE_NAME_LIST: tuple[str] = tuple([f'_image_preview.{f}' for f in IMAGE_FILE_FORMAT_LIST])
+COVER_FILE_NAME_LIST: tuple[str] = tuple([f'_cover.{f}' for f in IMAGE_FILE_FORMAT_LIST])
+MUSIC_FILE_FORMA_LIST: tuple[str] = (
     'mp3', 
 )
 
@@ -39,3 +39,7 @@ VIDEO_CAPTIONS_FOLDER = '_captions'
 VIDEO_CAPTIONS_MAP_FILE = '_map.json'
 
 
+TEXT_FILE_FORMAT_LIST: tuple[str] = (
+    'txt',
+)
+TEXTSET_IMAGESET_FOLDER = 'images'

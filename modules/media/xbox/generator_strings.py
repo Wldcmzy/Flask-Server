@@ -298,3 +298,115 @@ MUSICSET_HTML_MAIN = '''
 MUSICSET_HTML_ITEM = '''
         <div class="music-box" onclick="playMusic('{mname}')">{mname}</div>
 '''
+
+
+TEXTSET_HTML_MAIN = '''
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/media/resourcemedia/css/index_textset.css">
+
+<title>{title}</title>
+
+</head>
+<body>
+<div class="header" id="title-bar" onmousemove="moveTitle(event)">
+    <span id="title">{title}</span> 
+    <br/>
+    <span id="subtitle">{subtitle}</span>
+</div>
+<iframe class="content" id="novel-iframe" src="{ifream_link}" frameborder="0"></iframe> <!-- 外部网页链接 -->
+<div class="menu">
+    <div class="menu-option" onclick="toggleSettings(1)">设置</div>
+	<div class="menu-option" onclick="toggleSettings(2)">目录</div>
+</div>
+
+<!-- 设置弹出框 -->
+<div class="settings-popup" id="settings-popup">
+    <div class="color-picker">
+        <label for="font-color">字体颜色：</label>
+        <input type="color" id="font-color" onchange="changeFontColor(event)">
+    </div>
+    <div class="color-picker">
+        <label for="bg-color">背景颜色：</label>
+        <input type="color" id="bg-color" onchange="changeBgColor(event)">
+    </div>
+    <div>
+        <label for="font-size">字体大小：</label>
+        <input type="range" id="font-size" min="10" max="40" value="20" onchange="changeFontSize(event)">
+    </div>
+    <div>
+        <label for="font-style">字体样式：</label>
+        <select id="font-style" onchange="changeFontStyle(event)">
+            <option value="SimSun, sans-serif">宋体</option>
+            <option value="SimHei, sans-serif">黑体</option>
+            <option value="KaiTi, sans-serif">楷体</option>
+			<option value="Microsoft YaHei, sans-serif">微软雅黑</option>
+			<option value="FangSong, sans-serif">仿宋</option>
+			
+			<option value="Arial, sans-serif">Arial</option>
+			<option value="Helvetica, sans-serif">Helvetica</option>
+			<option value="Times New Roman, serif">Times New Roman</option>
+			<option value="Georgia, serif">Georgia</option>
+			<option value="Verdana, sans-serif">Verdana</option>
+			<option value="Tahoma, sans-serif">Tahoma</option>
+			<option value="Impact, sans-serif">Impact</option>
+			<option value="Courier New, monospace">Courier New</option>
+			<option value="Lucida Console, monospace">Lucida Console</option>
+			<option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+			<option value="Palatino Linotype, Book Antiqua, Palatino, serif">Palatino</option>
+			<option value="Garamond, serif">Garamond</option>
+			<option value="Bookman, serif">Bookman</option>
+        </select>
+    </div>
+    <div>
+        <label for="bold">加粗：</label>
+        <input type="checkbox" id="bold" onchange="changeFontWeight(event)">
+    </div>
+</div>
+
+
+<div class="settings-popup" id="directory-popup">
+    <!-- 目录弹出框内容 -->
+    {dictionary_tiems}
+</div>
+
+<script src="/media/resourcemedia/js/index_textset.js"></script>
+
+</body>
+</html>
+
+'''
+
+TEXTSET_HTML_ITEM = '''
+    <div class="page-link" onclick="changePage('{link}', '{text}')">{text}</div>
+'''
+
+TEXTSET_HTML_IFREAM_MAIN = '''
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/media/resourcemedia/css/index_textset_ifream.css">
+
+<title>外部文本</title>
+</head>
+<body>
+<div id="novel-content">
+{items}
+</div>
+</body>
+</html>
+
+'''
+
+TEXTSET_HTML_IFREAM_ITEM_P = '''
+    <p>{text}</p>
+'''
+
+TEXTSET_HTML_IFREAM_ITEM_IMG = '''
+    <img src="{link}" alt="{des}">
+'''

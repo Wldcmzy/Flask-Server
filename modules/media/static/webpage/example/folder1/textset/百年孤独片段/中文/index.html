@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/media/resourcemedia/css/index_textset.css">
+
+<title>中文</title>
+
+</head>
+<body>
+<div class="header" id="title-bar" onmousemove="moveTitle(event)">
+    <span id="title">中文</span> 
+    <br/>
+    <span id="subtitle">封面</span>
+</div>
+<iframe class="content" id="novel-iframe" src="/media/resourcemedia/webpage/example/folder1/textset/百年孤独片段/中文/cover.html" frameborder="0"></iframe> <!-- 外部网页链接 -->
+<div class="menu">
+    <div class="menu-option" onclick="toggleSettings(1)">设置</div>
+	<div class="menu-option" onclick="toggleSettings(2)">目录</div>
+</div>
+
+<!-- 设置弹出框 -->
+<div class="settings-popup" id="settings-popup">
+    <div class="color-picker">
+        <label for="font-color">字体颜色：</label>
+        <input type="color" id="font-color" onchange="changeFontColor(event)">
+    </div>
+    <div class="color-picker">
+        <label for="bg-color">背景颜色：</label>
+        <input type="color" id="bg-color" onchange="changeBgColor(event)">
+    </div>
+    <div>
+        <label for="font-size">字体大小：</label>
+        <input type="range" id="font-size" min="10" max="40" value="20" onchange="changeFontSize(event)">
+    </div>
+    <div>
+        <label for="font-style">字体样式：</label>
+        <select id="font-style" onchange="changeFontStyle(event)">
+            <option value="SimSun, sans-serif">宋体</option>
+            <option value="SimHei, sans-serif">黑体</option>
+            <option value="KaiTi, sans-serif">楷体</option>
+			<option value="Microsoft YaHei, sans-serif">微软雅黑</option>
+			<option value="FangSong, sans-serif">仿宋</option>
+			
+			<option value="Arial, sans-serif">Arial</option>
+			<option value="Helvetica, sans-serif">Helvetica</option>
+			<option value="Times New Roman, serif">Times New Roman</option>
+			<option value="Georgia, serif">Georgia</option>
+			<option value="Verdana, sans-serif">Verdana</option>
+			<option value="Tahoma, sans-serif">Tahoma</option>
+			<option value="Impact, sans-serif">Impact</option>
+			<option value="Courier New, monospace">Courier New</option>
+			<option value="Lucida Console, monospace">Lucida Console</option>
+			<option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+			<option value="Palatino Linotype, Book Antiqua, Palatino, serif">Palatino</option>
+			<option value="Garamond, serif">Garamond</option>
+			<option value="Bookman, serif">Bookman</option>
+        </select>
+    </div>
+    <div>
+        <label for="bold">加粗：</label>
+        <input type="checkbox" id="bold" onchange="changeFontWeight(event)">
+    </div>
+</div>
+
+
+<div class="settings-popup" id="directory-popup">
+    <!-- 目录弹出框内容 -->
+    
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独片段/中文/cover.html', '封面')">封面</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独片段/中文/textpage_zh04 第一章.html', 'zh04 第一章')">zh04 第一章</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独片段/中文/textpage_zh05 第二章.html', 'zh05 第二章')">zh05 第二章</div>
+
+</div>
+
+<script src="/media/resourcemedia/js/index_textset.js"></script>
+
+</body>
+</html>
+

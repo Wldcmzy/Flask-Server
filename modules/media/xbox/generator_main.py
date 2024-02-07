@@ -9,6 +9,7 @@ from .generator_func_direct import generate_direct
 from .generator_func_imageset import generate_imagesets
 from .generator_func_videoset import generate_videoset
 from .generator_func_musicset import generate_musicset
+from .generator_func_textset import generate_textset
 
 
 content_path: Path
@@ -31,6 +32,7 @@ def generate_by_type(path: Path, datatype: str):
         'imageset' : generate_imagesets,
         'videoset' : generate_videoset,
         'musicset' : generate_musicset,
+        'textset' : generate_textset,
     }
 
     func_map[datatype](content_path, webpage_path, content_url, webpage_url)

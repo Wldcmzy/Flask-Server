@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/media/resourcemedia/css/index_textset.css">
+
+<title>百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯</title>
+
+</head>
+<body>
+<div class="header" id="title-bar" onmousemove="moveTitle(event)">
+    <span id="title">百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯</span> 
+    <br/>
+    <span id="subtitle">0001 chapter_1</span>
+</div>
+<iframe class="content" id="novel-iframe" src="/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0001 chapter_1.html" frameborder="0"></iframe> <!-- 外部网页链接 -->
+<div class="menu">
+    <div class="menu-option" onclick="toggleSettings(1)">设置</div>
+	<div class="menu-option" onclick="toggleSettings(2)">目录</div>
+</div>
+
+<!-- 设置弹出框 -->
+<div class="settings-popup" id="settings-popup">
+    <div class="color-picker">
+        <label for="font-color">字体颜色：</label>
+        <input type="color" id="font-color" onchange="changeFontColor(event)">
+    </div>
+    <div class="color-picker">
+        <label for="bg-color">背景颜色：</label>
+        <input type="color" id="bg-color" onchange="changeBgColor(event)">
+    </div>
+    <div>
+        <label for="font-size">字体大小：</label>
+        <input type="range" id="font-size" min="10" max="40" value="20" onchange="changeFontSize(event)">
+    </div>
+    <div>
+        <label for="font-style">字体样式：</label>
+        <select id="font-style" onchange="changeFontStyle(event)">
+            <option value="SimSun, sans-serif">宋体</option>
+            <option value="SimHei, sans-serif">黑体</option>
+            <option value="KaiTi, sans-serif">楷体</option>
+			<option value="Microsoft YaHei, sans-serif">微软雅黑</option>
+			<option value="FangSong, sans-serif">仿宋</option>
+			
+			<option value="Arial, sans-serif">Arial</option>
+			<option value="Helvetica, sans-serif">Helvetica</option>
+			<option value="Times New Roman, serif">Times New Roman</option>
+			<option value="Georgia, serif">Georgia</option>
+			<option value="Verdana, sans-serif">Verdana</option>
+			<option value="Tahoma, sans-serif">Tahoma</option>
+			<option value="Impact, sans-serif">Impact</option>
+			<option value="Courier New, monospace">Courier New</option>
+			<option value="Lucida Console, monospace">Lucida Console</option>
+			<option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+			<option value="Palatino Linotype, Book Antiqua, Palatino, serif">Palatino</option>
+			<option value="Garamond, serif">Garamond</option>
+			<option value="Bookman, serif">Bookman</option>
+        </select>
+    </div>
+    <div>
+        <label for="bold">加粗：</label>
+        <input type="checkbox" id="bold" onchange="changeFontWeight(event)">
+    </div>
+</div>
+
+
+<div class="settings-popup" id="directory-popup">
+    <!-- 目录弹出框内容 -->
+    
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/imageset.html', '图集')">图集</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0001 chapter_1.html', '0001 chapter_1')">0001 chapter_1</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0002 chapter_2.html', '0002 chapter_2')">0002 chapter_2</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0003 chapter_3.html', '0003 chapter_3')">0003 chapter_3</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0004 chapter_4.html', '0004 chapter_4')">0004 chapter_4</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0005 chapter_5.html', '0005 chapter_5')">0005 chapter_5</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0006 chapter_6.html', '0006 chapter_6')">0006 chapter_6</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0007 chapter_7.html', '0007 chapter_7')">0007 chapter_7</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0008 chapter_8.html', '0008 chapter_8')">0008 chapter_8</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0009 chapter_9.html', '0009 chapter_9')">0009 chapter_9</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0010 chapter_10.html', '0010 chapter_10')">0010 chapter_10</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0011 chapter_11.html', '0011 chapter_11')">0011 chapter_11</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0012 chapter_12.html', '0012 chapter_12')">0012 chapter_12</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0013 chapter_13.html', '0013 chapter_13')">0013 chapter_13</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0014 chapter_14.html', '0014 chapter_14')">0014 chapter_14</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0015 chapter_15.html', '0015 chapter_15')">0015 chapter_15</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0016 chapter_16.html', '0016 chapter_16')">0016 chapter_16</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0017 chapter_17.html', '0017 chapter_17')">0017 chapter_17</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0018 chapter_18.html', '0018 chapter_18')">0018 chapter_18</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0019 chapter_19.html', '0019 chapter_19')">0019 chapter_19</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0020 chapter_20.html', '0020 chapter_20')">0020 chapter_20</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0021 chapter_21.html', '0021 chapter_21')">0021 chapter_21</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0022 chapter_22.html', '0022 chapter_22')">0022 chapter_22</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0023 chapter_23.html', '0023 chapter_23')">0023 chapter_23</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0024 chapter_24.html', '0024 chapter_24')">0024 chapter_24</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0025 chapter_25.html', '0025 chapter_25')">0025 chapter_25</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0026 chapter_26.html', '0026 chapter_26')">0026 chapter_26</div>
+
+    <div class="page-link" onclick="changePage('/media/resourcemedia/webpage/example/folder1/textset/百年孤独eupb提取/百年孤独（50周年纪念版）  （哥伦比亚）加西亚·马尔克斯/textpage_0027 chapter_27.html', '0027 chapter_27')">0027 chapter_27</div>
+
+</div>
+
+<script src="/media/resourcemedia/js/index_textset.js"></script>
+
+</body>
+</html>
+
