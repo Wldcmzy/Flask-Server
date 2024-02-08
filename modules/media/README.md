@@ -1,20 +1,22 @@
-## 静态网页多媒体服务器模块
+## <big><u>静态</u></big>网页多媒体服务器模块
 
 用于成组存放多媒体数据集，支持多级目录。
 
-因为嫌麻烦所有所有的资源都是静态的，也不支持ajax。
+因为嫌麻烦所有所有的资源都是<big><u>**静态**</u></big>的，也不支持ajax。
 
 ## 使用说明
 
-用户数据皆存放在`static/content`目录中。
+用户文件皆存放在`static/content`目录中。
 
-`solo_generator.py`脚本可以根据`static/content`目录的结构自动递归生成相同结构的静态网页文件存放在`static/webpage`目录中。
+`solo_generator.py`脚本可以根据`static/content`目录的结构自动递归生成相同结构的静态网页文件存放在`static/webpage`目录中。`solo_generator.py`脚本不会对`static/content`目录造成任何改动。
 
-`solo_generator.py`脚本默认只针对文件目录生成索引网页，只有遇到目录中有`_EODFSP.json`文件时，才会根据`_EODFSP.json`文件的内容在当前目录生成多媒体文件集的网页，并停止向更深层的目录递归。
+`solo_generator.py`脚本无法自动调用，用户更新`static/content`目录后应手动调用`solo_generator.py`脚本生成最新的静态网页文件。
+
+`solo_generator.py`脚本在默认情况下只针对文件目录生成索引网页，只有遇到目录中含有`_EODFSP.json`文件时，才会根据`_EODFSP.json`文件的内容在当前目录生成多媒体文件集的网页，并停止向更深层的目录递归。
 
 `solo_generator.py`脚本每次运行时都会先尝试删除先前的`static/webpage`目录，程序实现这一过程可能较慢，可以提前手动删除。
 
-**具体示范见`static\content\example`。**
+<big>**具体示范见`static\content\example`目录。**</big>
 
 ## 媒体集分类
 
