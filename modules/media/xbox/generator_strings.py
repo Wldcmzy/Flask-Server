@@ -273,6 +273,8 @@ MUSICSET_HTML_MAIN = '''
         <!-- 添加更多音乐框... -->
     </div>
 
+    <br/><br/><br/><br/><br/>
+
     <div id="player">
         <div id="progress-bar">
             <div id="song-name"></div>

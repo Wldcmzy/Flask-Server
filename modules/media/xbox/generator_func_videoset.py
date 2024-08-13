@@ -34,11 +34,10 @@ def generate_videoset(
 
         captions = ''
         if captions_map != None and videoname in captions_map:
-            for caption_file_name in captions_map[videoname]:
-                caption_url = f'{URL_PREFIX}{content_url}/{VIDEO_CAPTIONS_FOLDER}/{caption_file_name}'
-                captions += VIDEOSET_CONTEXT_HTML_CAPTION_TIEM.format(
-                    caption_url = caption_url,
-                )
+            caption_url = f'{URL_PREFIX}{content_url}/{VIDEO_CAPTIONS_FOLDER}/{captions_map[videoname]}'
+            captions += VIDEOSET_CONTEXT_HTML_CAPTION_TIEM.format(
+                caption_url = caption_url,
+            )
 
         video_content_html_title = videoname[ : -4] if videoname.endswith('.mp4') else videoname
         video_content_html_text = VIDEOSET_CONTEXT_HTML_MAIN.format(
